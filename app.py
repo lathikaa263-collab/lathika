@@ -1724,7 +1724,7 @@ if page == "🏠 Home":
         SRM Institute of Science and Technology, Tiruchirappalli
         </div>
         <div style="text-align:center; font-size:18px; font-weight:600; margin-top:5px;">
-        Faculty of Engineering and Technology | School of Sciences | Division of Chemistry
+        
         </div>
         """,
         unsafe_allow_html=True
