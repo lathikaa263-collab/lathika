@@ -38,12 +38,21 @@ from reportlab.lib.units import inch
 from reportlab.lib.utils import ImageReader
 import tempfile
 import os
-# Dark / Light Mode Toggle
-st.sidebar.title("Display Settings")
+import streamlit as st
 
+st.set_page_config(
+    page_title="Virtual Molecular Lab",
+    page_icon="🧪",
+    layout="wide"
+)
+
+# Initialize theme
 if "dark_mode" not in st.session_state:
     st.session_state.dark_mode = False
 
+st.sidebar.title("Display Settings")
+
+# Toggle button
 if st.sidebar.button(
     "☀️ Switch to Light Mode"
     if st.session_state.dark_mode
@@ -51,18 +60,104 @@ if st.sidebar.button(
 ):
     st.session_state.dark_mode = not st.session_state.dark_mode
 
+# Theme colors
 if st.session_state.dark_mode:
-    st.markdown("""
-        <style>
-        .stApp {
-            background-color: #1e1e2f;
-            color: #f5f5f5;
-        }
-        [data-testid="stSidebar"] {
-            background-color: #292940;
-        }
-        </style>
-    """, unsafe_allow_html=True)
+    background = "#12121F"
+    sidebar = "#202035"
+    text = "#00FFFF"       # Fluorescent cyan
+    heading = "#39FF14"    # Neon green
+    input_background = "#292940"
+else:
+    background = "#FFFFFF"
+    sidebar = "#F0F2F6"
+    text = "#222222"
+    heading = "#154360"
+    input_background = "#FFFFFF"
+
+# Apply theme
+st.markdown(
+    f"""
+    <style>
+    .stApp {{
+        background-color: {background};
+        color: {text};
+    }}
+
+    [data-testid="stSidebar"] {{
+        background-color: {sidebar};
+    }}
+
+    /* Main text */
+    .stApp p,
+    .stApp label,
+    .stApp li,
+    .stApp span {{
+        color: {text} !important;
+    }}
+
+    /* Headings */
+    .stApp h1,
+    .stApp h2,
+    .stApp h3,
+    .stApp h4 {{
+        color: {heading} !important;
+    }}
+
+    /* Sidebar text */
+    [data-testid="stSidebar"] * {{
+        color: {text} !important;
+    }}
+
+    /* Text and number inputs */
+    .stTextInput input,
+    .stNumberInput input,
+    .stTextArea textarea {{
+        background-color: {input_background} !important;
+        color: {text} !important;
+        -webkit-text-fill-color: {text} !important;
+    }}
+
+    /* Dropdowns */
+    [data-baseweb="select"] {{
+        background-color: {input_background} !important;
+        color: {text} !important;
+    }}
+
+    /* Buttons */
+    .stButton button {{
+        border: 1px solid {heading};
+        border-radius: 8px;
+        font-weight: bold;
+    }}
+
+    /* Alerts */
+    [data-testid="stAlert"] {{
+        color: {text} !important;
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+)
+
+# Application content
+st.title("🧪 Virtual Molecular Lab")
+st.subheader("Molecular Properties")
+
+st.write(
+    "Compare molecular formulas, molecular weights, "
+    "hydrogen-bond donors, and acceptors."
+)
+
+molecule_name = st.text_input("Enter molecule name")
+molecular_weight = st.number_input(
+    "Enter molecular weight",
+    min_value=0.0,
+    step=0.1
+)
+
+if st.button("Submit"):
+    st.write("Molecule:", molecule_name)
+    st.write("Molecular Weight:", molecular_weight)
     # Molecular Property Chart
 
 st.subheader("📊 Molecular Property Analysis")
