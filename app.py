@@ -63,47 +63,7 @@ if st.session_state.dark_mode:
         }
         </style>
     """, unsafe_allow_html=True)
-    # Molecular Property Chart
-
-st.subheader("📊 Molecular Property Analysis")
-st.write("Compare the molecular weights of different molecules.")
-
-# Molecular data
-data = {
-    "Molecule": [
-        "Ethanol",
-        "Benzene",
-        "Phenol",
-        "Acetic Acid",
-        "Aspirin",
-        "Caffeine"
-    ],
-    "Molecular Weight (g/mol)": [
-        46.07,
-        78.11,
-        94.11,
-        60.05,
-        180.16,
-        194.19
-    ]
-}
-
-# Create DataFrame
-df = pd.DataFrame(data)
-
-# Display data table
-st.dataframe(df, use_container_width=True)
-
-# Generate bar chart
-st.bar_chart(
-    df.set_index("Molecule"),
-    y="Molecular Weight (g/mol)"
-)
-
-st.caption(
-    "Molecular weights are approximate values in g/mol."
-)
-
+   
 
 # ============================================================
 # PAGE CONFIGURATION
