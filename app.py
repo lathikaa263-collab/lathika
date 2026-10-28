@@ -41,7 +41,7 @@ import os
 import streamlit as st
 
 st.set_page_config(
-    page_title="CHEM CHAOS",
+    page_title="CHEM𖦹CHAOS",
     
     layout="wide"
 )
@@ -140,7 +140,7 @@ st.markdown(
 )
 import pandas as pd
 
-st.title("CHEM CHAOS")
+st.title("CHEM𖦹CHAOS")
 st.subheader("Molecular Properties")
 
 st.write(
@@ -177,7 +177,7 @@ st.caption("Molecular weights are approximate values in g/mol.")
 # ============================================================
 
 st.set_page_config(
-    page_title="CHEM CHAOS",
+    page_title="CHEM𖦹CHAOS",
     
     layout="wide"
 )
@@ -729,7 +729,7 @@ def generate_molecule_pdf(
 
     interpretation = """
     This report was generated automatically using the
-    CHEM CHAOS. The molecular properties
+    CHEM𖦹CHAOS. The molecular properties
     were calculated from the chemical structure represented by
     the submitted SMILES notation using the RDKit cheminformatics
     toolkit.
@@ -1488,7 +1488,7 @@ def generate_multi_final_report(student_name, registration_number, molecule_reco
     )
     story = [
         Spacer(1, 0.15 * inch),
-        Paragraph("CHEM CHAOS", title_style),
+        Paragraph("CHEM𖦹CHAOS", title_style),
         Spacer(1, 0.08 * inch),
         Paragraph("MULTI-MOLECULE STUDENT ANALYSIS REPORT", heading_style),
         Paragraph(
@@ -2640,6 +2640,6 @@ elif page == "📄 Final Project Report":
 st.divider()
 
 st.caption(
-    "CHEM CHAOS | "
+    "CHEM𖦹CHAOS | "
     "Developed using Python, Streamlit and RDKit"
 )
