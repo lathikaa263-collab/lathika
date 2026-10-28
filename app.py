@@ -140,7 +140,7 @@ st.markdown(
 )
 import pandas as pd
 
-st.title("🧪 Virtual Molecular Lab")
+st.title("CHEM CHAOS")
 st.subheader("Molecular Properties")
 
 st.write(
@@ -177,8 +177,8 @@ st.caption("Molecular weights are approximate values in g/mol.")
 # ============================================================
 
 st.set_page_config(
-    page_title="Cheminformatics Virtual Laboratory",
-    page_icon="🧪",
+    page_title="CHEM CHAOS",
+    
     layout="wide"
 )
 
@@ -729,7 +729,7 @@ def generate_molecule_pdf(
 
     interpretation = """
     This report was generated automatically using the
-    Cheminformatics Virtual Laboratory. The molecular properties
+    CHEM CHAOS. The molecular properties
     were calculated from the chemical structure represented by
     the submitted SMILES notation using the RDKit cheminformatics
     toolkit.
@@ -1488,7 +1488,7 @@ def generate_multi_final_report(student_name, registration_number, molecule_reco
     )
     story = [
         Spacer(1, 0.15 * inch),
-        Paragraph("CHEMINFORMATICS VIRTUAL LABORATORY", title_style),
+        Paragraph("CHEM CHAOS", title_style),
         Spacer(1, 0.08 * inch),
         Paragraph("MULTI-MOLECULE STUDENT ANALYSIS REPORT", heading_style),
         Paragraph(
@@ -1714,7 +1714,7 @@ if page == "🏠 Home":
             st.image(logo_path, use_container_width=True)
 
     st.markdown(
-        '<div class="main-title">🧪 Cheminformatics Virtual Laboratory</div>',
+        '<div class="main-title">CHEM CHAOS</div>',
         unsafe_allow_html=True
     )
 
