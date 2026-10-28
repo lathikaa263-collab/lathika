@@ -13,6 +13,7 @@ We will be able to
 - Visualize molecular structures in 2D and 3D.
 - Calculate molecular descriptors.
 - Understand structure–property relationships.
+- View Molecular charts.
 
 ## Molecular Descriptors
 
