@@ -1742,25 +1742,25 @@ if page == "🏠 Home":
     st.markdown("### 🧪 What can students do?")
 
     st.markdown("""
-    ✅ Enter any SMILES notation
+     Enter any SMILES notation
 
     ✅ Validate molecular structures
 
-    ✅ Generate 2D structures
+    ☆ Generate 2D structures
 
-    ✅ Generate interactive 3D structures
+    ☆ Generate interactive 3D structures
 
-    ✅ Select different molecular visualization styles
+    ☆ Select different molecular visualization styles
 
-    ✅ Calculate complete molecular properties
+    ☆ Calculate complete molecular properties
 
-    ✅ Download molecular reports
+    ☆ Download molecular reports
 
-    ✅View molecular charts
+    ☆ View molecular charts
 
-    ✅ Compare multiple molecules
+    ☆ Compare multiple molecules
 
-    ✅ Complete an assessment
+    ☆ Complete an assessment
     """)
 
     st.markdown("### Example Molecules")
