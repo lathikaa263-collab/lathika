@@ -1652,7 +1652,7 @@ def generate_multi_final_report(student_name, registration_number, molecule_reco
 # SIDEBAR
 # ============================================================
 
-st.sidebar.title("🧪 Virtual Lab")
+st.sidebar.title("CHEM𖦹CHAOS")
 
 page = st.sidebar.radio(
 
@@ -1660,19 +1660,19 @@ page = st.sidebar.radio(
 
     [
 
-        "🏠 Home",
+        "★ Home",
 
-        "📖 Theory",
+        "✴︎ Theory",
 
-        "🧬 Molecular Visualization",
+        "⟡ Molecular Visualization",
 
-        "📊 Molecular Properties Report",
+        "✽ Molecular Properties Report",
 
-        "📈 Structure–Property Analysis",
+        "༄ Structure–Property Analysis",
 
-        "📝 Assessment",
+        "𓍢ִ໋🀦 Assessment",
 
-        "📄 Final Project Report"
+        "🗫 Final Project Report"
 
     ]
 )
