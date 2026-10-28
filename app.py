@@ -1744,7 +1744,7 @@ if page == "🏠 Home":
     st.markdown("""
      Enter any SMILES notation
 
-    ✅ Validate molecular structures
+    ☆ Validate molecular structures
 
     ☆ Generate 2D structures
 
