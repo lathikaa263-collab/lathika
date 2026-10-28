@@ -63,6 +63,152 @@ if st.session_state.dark_mode:
         }
         </style>
     """, unsafe_allow_html=True)
+    # Molecular Property Chart
+
+st.subheader("📊 Molecular Property Analysis")
+st.write("Compare the molecular weights of different molecules.")
+
+# Molecular data
+data = {
+    "Molecule": [
+        "Ethanol",
+        "Benzene",
+        "Phenol",
+        "Acetic Acid",
+        "Aspirin",
+        "Caffeine"
+    ],
+    "Molecular Weight (g/mol)": [
+        46.07,
+        78.11,
+        94.11,
+        60.05,
+        180.16,
+        194.19
+    ]
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Display data table
+st.dataframe(df, use_container_width=True)
+
+# Generate bar chart
+st.bar_chart(
+    df.set_index("Molecule"),
+    y="Molecular Weight (g/mol)"
+)
+
+st.caption(
+    "Molecular weights are approximate values in g/mol."
+)
+import tkinter as tk
+from tkinter import ttk
+
+# Create main window
+root = tk.Tk()
+root.title("Molecule Comparison Lab")
+root.geometry("750x450")
+root.configure(bg="#eaf2f8")
+
+# Title
+title = tk.Label(
+    root,
+    text="Molecule Comparison Table",
+    font=("Arial", 20, "bold"),
+    bg="#eaf2f8",
+    fg="#154360"
+)
+title.pack(pady=15)
+
+# Input frame
+frame = tk.Frame(root, bg="#eaf2f8")
+frame.pack(pady=10)
+
+labels = [
+    "Molecule Name",
+    "Molecular Formula",
+    "Molecular Weight",
+    "H-Bond Donors",
+    "H-Bond Acceptors"
+]
+
+entries = []
+
+for col in range(2):
+    molecule_entries = []
+
+    heading = tk.Label(
+        frame,
+        text=f"Molecule {col + 1}",
+        font=("Arial", 13, "bold"),
+        bg="#eaf2f8"
+    )
+    heading.grid(row=0, column=col + 1, padx=10, pady=5)
+
+    for row, label in enumerate(labels):
+        if col == 0:
+            tk.Label(
+                frame,
+                text=label,
+                font=("Arial", 10),
+                bg="#eaf2f8"
+            ).grid(row=row + 1, column=0, sticky="w", padx=10, pady=6)
+
+        entry = tk.Entry(frame, width=22, font=("Arial", 10))
+        entry.grid(row=row + 1, column=col + 1, padx=10, pady=6)
+        molecule_entries.append(entry)
+
+    entries.append(molecule_entries)
+
+
+# Compare molecules
+def compare_molecules():
+    result_window = tk.Toplevel(root)
+    result_window.title("Comparison Results")
+    result_window.geometry("650x300")
+
+    columns = ("Property", "Molecule 1", "Molecule 2")
+
+    table = ttk.Treeview(
+        result_window,
+        columns=columns,
+        show="headings"
+    )
+
+    for column in columns:
+        table.heading(column, text=column)
+        table.column(column, width=200, anchor="center")
+
+    table.pack(fill="both", expand=True, padx=10, pady=10)
+
+    for i, label in enumerate(labels):
+        value1 = entries[0][i].get()
+        value2 = entries[1][i].get()
+
+        table.insert(
+            "",
+            "end",
+            values=(label, value1, value2)
+        )
+
+
+# Compare button
+compare_button = tk.Button(
+    root,
+    text="Compare Molecules",
+    command=compare_molecules,
+    font=("Arial", 12, "bold"),
+    bg="#2874a6",
+    fg="white",
+    padx=15,
+    pady=8
+)
+compare_button.pack(pady=15)
+
+# Run application
+root.mainloop()
    
 
 # ============================================================
