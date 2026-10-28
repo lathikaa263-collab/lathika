@@ -41,8 +41,8 @@ import os
 import streamlit as st
 
 st.set_page_config(
-    page_title="Virtual Molecular Lab",
-    page_icon="🧪",
+    page_title="CHEM CHAOS",
+    
     layout="wide"
 )
 
@@ -2638,6 +2638,6 @@ elif page == "📄 Final Project Report":
 st.divider()
 
 st.caption(
-    "🧪 Cheminformatics Virtual Laboratory | "
+    "CHEM CHAOS | "
     "Developed using Python, Streamlit and RDKit"
 )
