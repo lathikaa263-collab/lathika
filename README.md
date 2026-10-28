@@ -1,4 +1,4 @@
-# 🧪 Cheminformatics Virtual Laboratory
+# CHEM CHAOS
 
 ## Aim
 
@@ -7,7 +7,7 @@ computational tools to represent, visualize and analyze chemical structures.
 
 ## Learning Objectives
 
-Students will be able to
+We will be able to
 
 - Convert molecular representations using SMILES.
 - Visualize molecular structures in 2D and 3D.
