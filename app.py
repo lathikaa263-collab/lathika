@@ -1806,8 +1806,8 @@ if page == "🏠 Home":
 
     st.divider()
 
-    st.markdown("###  Developed by")
-    st.markdown("** M.LATHIKA**")
+    st.markdown("###Developed by")
+    st.markdown(" M.LATHIKA")
     st.markdown("STUDENT ")
     st.markdown("Division of cybersecurity, School of ComputerScience  ")
     st.markdown("Student of Engineering and Technology  ")
