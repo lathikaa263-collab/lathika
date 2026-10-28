@@ -1756,6 +1756,8 @@ if page == "🏠 Home":
 
     ✅ Download molecular reports
 
+    ✅View molecular charts
+
     ✅ Compare multiple molecules
 
     ✅ Complete an assessment
