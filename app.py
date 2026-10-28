@@ -1804,7 +1804,7 @@ if page == "🏠 Home":
         hide_index=True
     )
 
-    st.divider()
+    st.divider(
 
     st.markdown("###Developed by")
     st.markdown("M.LATHIKA")
@@ -1814,7 +1814,7 @@ if page == "🏠 Home":
     st.markdown("SRM Institute of Science and Technology, Tiruchirappalli")
 
     st.info("📧 **For queries, contact:** lathikaa263@gmail.com")
-
+    )
 
 # ============================================================
 # THEORY PAGE
