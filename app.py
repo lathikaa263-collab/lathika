@@ -38,6 +38,71 @@ from reportlab.lib.units import inch
 from reportlab.lib.utils import ImageReader
 import tempfile
 import os
+# Dark / Light Mode Toggle
+st.sidebar.title("Display Settings")
+
+if "dark_mode" not in st.session_state:
+    st.session_state.dark_mode = False
+
+if st.sidebar.button(
+    "☀️ Switch to Light Mode"
+    if st.session_state.dark_mode
+    else "🌙 Switch to Dark Mode"
+):
+    st.session_state.dark_mode = not st.session_state.dark_mode
+
+if st.session_state.dark_mode:
+    st.markdown("""
+        <style>
+        .stApp {
+            background-color: #1e1e2f;
+            color: #f5f5f5;
+        }
+        [data-testid="stSidebar"] {
+            background-color: #292940;
+        }
+        </style>
+    """, unsafe_allow_html=True)
+    # Molecular Property Chart
+
+st.subheader("📊 Molecular Property Analysis")
+st.write("Compare the molecular weights of different molecules.")
+
+# Molecular data
+data = {
+    "Molecule": [
+        "Ethanol",
+        "Benzene",
+        "Phenol",
+        "Acetic Acid",
+        "Aspirin",
+        "Caffeine"
+    ],
+    "Molecular Weight (g/mol)": [
+        46.07,
+        78.11,
+        94.11,
+        60.05,
+        180.16,
+        194.19
+    ]
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Display data table
+st.dataframe(df, use_container_width=True)
+
+# Generate bar chart
+st.bar_chart(
+    df.set_index("Molecule"),
+    y="Molecular Weight (g/mol)"
+)
+
+st.caption(
+    "Molecular weights are approximate values in g/mol."
+)
 
 
 # ============================================================
