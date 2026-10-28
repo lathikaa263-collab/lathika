@@ -139,65 +139,6 @@ st.markdown(
     unsafe_allow_html=True
 )
 
-# Application content
-st.title("🧪 Virtual Molecular Lab")
-st.subheader("Molecular Properties")
-
-st.write(
-    "Compare molecular formulas, molecular weights, "
-    "hydrogen-bond donors, and acceptors."
-)
-
-molecule_name = st.text_input("Enter molecule name")
-molecular_weight = st.number_input(
-    "Enter molecular weight",
-    min_value=0.0,
-    step=0.1
-)
-
-if st.button("Submit"):
-    st.write("Molecule:", molecule_name)
-    st.write("Molecular Weight:", molecular_weight)
-    # Molecular Property Chart
-
-st.subheader("📊 Molecular Property Analysis")
-st.write("Compare the molecular weights of different molecules.")
-
-# Molecular data
-data = {
-    "Molecule": [
-        "Ethanol",
-        "Benzene",
-        "Phenol",
-        "Acetic Acid",
-        "Aspirin",
-        "Caffeine"
-    ],
-    "Molecular Weight (g/mol)": [
-        46.07,
-        78.11,
-        94.11,
-        60.05,
-        180.16,
-        194.19
-    ]
-}
-
-# Create DataFrame
-df = pd.DataFrame(data)
-
-# Display data table
-st.dataframe(df, use_container_width=True)
-
-# Generate bar chart
-st.bar_chart(
-    df.set_index("Molecule"),
-    y="Molecular Weight (g/mol)"
-)
-
-st.caption(
-    "Molecular weights are approximate values in g/mol."
-)
 
         
    
