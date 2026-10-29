@@ -1886,29 +1886,21 @@ st.sidebar.markdown("""
     - Structure-property relationships
     """)
 
+   st.markdown(
+        "Enter any SMILES notation\n\n"
+        "☆ Validate molecular structures\n\n"
+        "☆ Generate 2D structures\n\n"
+        "☆ Generate interactive 3D structures\n\n"
+        "☆ Select different molecular visualization styles\n\n"
+        "☆ Calculate complete molecular properties\n\n"
+        "☆ Download molecular reports\n\n"
+        "☆ View molecular charts\n\n"
+        "☆ Compare multiple molecules\n\n"
+        "☆ Complete an assessment"
+    ) 
     
    
-    st.markdown("""
-     Enter any SMILES notation
-
-    ☆ Validate molecular structures
-
-    ☆ Generate 2D structures
-
-    ☆ Generate interactive 3D structures
-
-    ☆ Select different molecular visualization styles
-
-    ☆ Calculate complete molecular properties
-
-    ☆ Download molecular reports
-
-    ☆ View molecular charts
-
-    ☆ Compare multiple molecules
-
-    ☆ Complete an assessment
-    """)
+    
    st.markdown("### Example Molecules")
 
     example_df = pd.DataFrame({
