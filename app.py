@@ -1869,23 +1869,22 @@ student_name = st.sidebar.text_input("Student Name", key="student_name")
 registration_number = st.sidebar.text_input("Registration Number", key="registration_number")
 
 st.sidebar.markdown("""
-### 🎓 Learning Objectives
+    ### 🎓 Learning Objectives
 
-Students can learn:
+    Students can learn:
 
-- SMILES notation
-- Molecular representation
-- 2D visualization
-- 3D visualization
-- Molecular descriptors
-- Structure-property relationships
-""")
-
-   
-    st.write("""
-    This interactive virtual laboratory helps students understand
-    important concepts in cheminformatics and computational chemistry.
+    - SMILES notation
+    - Molecular representation
+    - 2D visualization
+    - 3D visualization
+    - Molecular descriptors
+    - Structure-property relationships
     """)
+
+    st.write(
+        "This interactive virtual laboratory helps students understand "
+        "important concepts in cheminformatics and computational chemistry."
+    )
     st.markdown("""✴What can students do?✴""")
     st.markdown("""
      Enter any SMILES notation
