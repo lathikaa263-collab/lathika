@@ -499,3 +499,4 @@ def get_property_interpretation(property_name, value, properties):
         return "Indicates lipophilicity."
     else:
         return "Property calculated successfully."
+
