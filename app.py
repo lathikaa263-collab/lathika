@@ -158,36 +158,63 @@ st.sidebar.markdown(
     "</div>",
     unsafe_allow_html=True
 )
-import pandas as pd
+# ============================================================
+# MAIN PAGE ROUTING (This handles the page switching)
+# ============================================================
 
-st.title("CHEM𖦹CHAOS")
+if page == "★ Home":
+    st.title("★ Home")
+    st.subheader("Welcome to CHEM𖦹CHAOS - The Virtual Cheminformatics Laboratory")
+    st.write(
+        "Compare molecular formulas, molecular weights, "
+        "hydrogen-bond donors, and acceptors."
+    )
 
+    # Sample Data for the Molecular Chart
+    data = {
+        "Molecule": ["Water", "Ethanol", "Glucose", "Aspirin", "Caffeine"],
+        "Formula": ["H2O", "C2H5OH", "C6H12O6", "C9H8O4", "C8H10N4O2"],
+        "Molecular Weight (g/mol)": [18.015, 46.07, 180.16, 180.16, 194.19]
+    }
 
-st.write(
-    "Compare molecular formulas, molecular weights, "
-    "hydrogen-bond donors, and acceptors."
-)
+    # Create DataFrame
+    df = pd.DataFrame(data)
 
-# Sample Data for the Molecular Chart
-data = {
-    "Molecule": ["Water", "Ethanol", "Glucose", "Aspirin", "Caffeine"],
-    "Formula": ["H2O", "C2H5OH", "C6H12O6", "C9H8O4", "C8H10N4O2"],
-    "Molecular Weight (g/mol)": [18.015, 46.07, 180.16, 180.16, 194.19]
-}
+    # Display data table
+    st.dataframe(df, use_container_width=True)
 
-# Create DataFrame
-df = pd.DataFrame(data)
+    # Generate bar chart
+    st.bar_chart(
+        df.set_index("Molecule"),
+        y="Molecular Weight (g/mol)"
+    )
 
-# Display data table
-st.dataframe(df, use_container_width=True)
+    st.caption("Molecular weights are approximate values in g/mol.")
 
-# Generate bar chart
-st.bar_chart(
-    df.set_index("Molecule"),
-    y="Molecular Weight (g/mol)"
-)
+elif page == "✴︎ Theory":
+    st.title("✴︎ Theory")
+    st.write("Theory content goes here.")
 
-st.caption("Molecular weights are approximate values in g/mol.")
+elif page == "⟡ Molecular Visualization":
+    st.title("⟡ Molecular Visualization")
+    st.write("Visualization tools go here.")
+
+elif page == "✽ Molecular Properties Report":
+    st.title("✽ Molecular Properties Report")
+    st.write("Properties calculation goes here.")
+
+elif page == "༄ Structure–Property Analysis":
+    st.title("༄ Structure–Property Analysis")
+    st.write("Structure-property analysis goes here.")
+
+elif page == "𓍢ִ໋🀦 Assessment":
+    st.title("𓍢ִ໋🀦 Assessment")
+    st.write("Assessment tools go here.")
+
+elif page == "🗫 Final Project Report":
+    st.title("🗫 Final Project Report")
+    st.write("PDF report generator goes here.")
+
 
         
    
@@ -195,12 +222,6 @@ st.caption("Molecular weights are approximate values in g/mol.")
 # ============================================================
 # PAGE CONFIGURATION
 # ============================================================
-
-st.set_page_config(
-    page_title="CHEM𖦹CHAOS",
-    
-    layout="wide"
-)
 
 
 # ============================================================
@@ -1804,7 +1825,7 @@ if page == "★ Home":
 
     st.divider()
 
-    st.markdown("###Developed by")
+    st.markdown("Developed by")
     st.markdown("M.LATHIKA")
     st.markdown("STUDENT")
     st.markdown("Division of cybersecurity, School of ComputerScience  ")
