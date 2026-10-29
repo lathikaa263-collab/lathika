@@ -163,6 +163,10 @@ st.sidebar.markdown(
 # ============================================================
 
 if page == "★ Home":
+    # 1. Display the custom logo centered at the top
+    logo_col1, logo_col2, logo_col3 = st.columns([1, 4, 1])
+    with logo_col2:
+        st.image("1000051916.png", use_container_width=True)
     st.title("★ Home")
     st.subheader("Welcome to CHEM𖦹CHAOS - The Virtual Cheminformatics Laboratory")
     st.write(
@@ -1882,34 +1886,11 @@ Students can learn:
 # HOME PAGE
 # ============================================================
 
-if page == "★ Home":
     
   # ========================================================
     # INSTITUTIONAL HEADER / COLLEGE LOGO
     # ========================================================
-    logo_path = "ChemChaos_logo.jpeg"
-
-    if os.path.exists(logo_path):
-        logo_col1, logo_col2, logo_col3 = st.columns([1, 4, 1])
-        with logo_col2:
-            st.image(logo_path, use_container_width=True)
-
-    st.markdown(
-        '<div class="main-title">CHEM𖦹CHAOS</div>',
-        unsafe_allow_html=True
-    )
-
-    st.markdown(
-        """
-        <div style="text-align:center; font-size:24px; font-weight:700; color:#1f4e79;">
-        SRM Institute of Science and Technology, Tiruchirappalli
-        </div>
-        <div style="text-align:center; font-size:18px; font-weight:600; margin-top:5px;">
-        
-        </div>
-        """,
-        unsafe_allow_html=True
-    )
+   
 
     st.divider()
 
