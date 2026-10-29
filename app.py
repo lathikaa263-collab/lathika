@@ -49,9 +49,6 @@ st.set_page_config(
 # Initialize theme
 if "dark_mode" not in st.session_state:
     st.session_state.dark_mode = False
-
-st.sidebar.title("Display Settings")
-
 # Toggle button
 if st.sidebar.button(
     "☀️ Switch to Light Mode"
@@ -1677,28 +1674,6 @@ def generate_multi_final_report(student_name, registration_number, molecule_reco
 
 st.sidebar.title("CHEM𖦹CHAOS")
 
-page = st.sidebar.radio(
-
-    "Navigation",
-
-    [
-
-        "★ Home",
-
-        "✴︎ Theory",
-
-        "⟡ Molecular Visualization",
-
-        "✽ Molecular Properties Report",
-
-        "༄ Structure–Property Analysis",
-
-        "𓍢ִ໋🀦 Assessment",
-
-        "🗫 Final Project Report"
-
-    ]
-)
 
 st.sidebar.divider()
 
