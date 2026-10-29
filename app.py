@@ -227,6 +227,39 @@ elif page == "✴︎ Theory":
         4. LogP not higher than 5
         """
     )
+    st.markdown("### 4. Fraction $C_{sp^3}$ (Saturation & 3D Character)")
+    st.write(
+        "Fraction $C_{sp^3}$ ($F_{csp3}$) is the ratio of $sp^3$-hybridized carbons to the total carbon count. "
+        "It is a key indicator of a molecule's three-dimensional complexity:"
+    )
+    st.markdown(
+        """
+        - **Low $F_{csp3}$ (near 0):** Indicates a flat, highly aromatic, or unsaturated molecular framework.
+        - **High $F_{csp3}$ (near 1):** Indicates a saturated, more complex 3D shape, which often correlates with improved clinical success and solubility.
+        """
+    )
+
+    st.markdown("### 5. Stereochemistry & 3D Conformation")
+    st.write(
+        "Molecules share the same chemical formula but can differ drastically in their spatial arrangement:"
+    )
+    st.markdown(
+        """
+        - **Chirality:** Molecules containing chiral centers (stereocenters) can exist as non-superimposable mirror images (enantiomers), which often interact differently with biological receptors.
+        - **Conformational Energy Minimization:** Using force fields like MMFF or UFF (via RDKit and ETKDG algorithms), computers can simulate low-energy 3D geometries that molecules adopt in nature.
+        """
+    )
+
+    st.markdown("### 6. Chemical Bonding: Sigma ($\sigma$) and Pi ($\pi$) Bonds")
+    st.write(
+        "Understanding how atoms connect involves analyzing different orbital overlaps:"
+    )
+    st.markdown(
+        """
+        - **Sigma ($\sigma$) Bonds:** Formed by the head-on overlap of atomic orbitals. Every single bond, as well as the primary component of multiple bonds, is a $\sigma$ bond.
+        - **Pi ($\pi$) Bonds:** Formed by the lateral (side-by-side) overlap of unhybridized $p$-orbitals. They constitute the second and third lines of double/triple bonds and contribute to electron delocalization in aromatic rings.
+        """
+    )
 elif page == "⟡ Molecular Visualization":
     st.title("⟡ Molecular Visualization")
     st.write("Visualization tools go here.")
