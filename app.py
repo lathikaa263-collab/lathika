@@ -1943,12 +1943,12 @@ st.dataframe(
 
 st.divider()
 
-    st.markdown("Developed by")
-    st.markdown("M.LATHIKA")
-    st.markdown("STUDENT")
-    st.markdown("Division of cybersecurity, School of ComputerScience  ")
-    st.markdown("Student of Engineering and Technology  ")
-    st.markdown("SRM Institute of Science and Technology, Tiruchirappalli")
+st.markdown("Developed by")
+st.markdown("M.LATHIKA")
+st.markdown("STUDENT")
+st.markdown("Division of cybersecurity, School of ComputerScience  ")
+st.markdown("Student of Engineering and Technology  ")
+st.markdown("SRM Institute of Science and Technology, Tiruchirappalli")
 
     st.info("📧 **For queries, contact:** lathikaa263@gmail.com")
     
