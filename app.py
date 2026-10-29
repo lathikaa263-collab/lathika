@@ -1882,7 +1882,7 @@ Students can learn:
 - Molecular descriptors
 - Structure-property relationships
 """)
-    st.divider()
+st.divider()
 
     st.write("""
     This interactive virtual laboratory helps students understand
