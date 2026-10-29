@@ -1882,14 +1882,14 @@ Students can learn:
 - Molecular descriptors
 - Structure-property relationships
 """)
-st.divider()
+    st.divider()
 
-st.write("""
+    st.write("""
     This interactive virtual laboratory helps students understand
     important concepts in cheminformatics and computational chemistry.
     """)
-st.markdown("""✴What can students do?✴""")
-st.markdown("""
+    st.markdown("""✴What can students do?✴""")
+    st.markdown("""
      Enter any SMILES notation
 
     ☆ Validate molecular structures
@@ -1910,8 +1910,7 @@ st.markdown("""
 
     ☆ Complete an assessment
     """)
-
-    st.markdown("### Example Molecules")
+   st.markdown("### Example Molecules")
 
     example_df = pd.DataFrame({
 
