@@ -167,12 +167,14 @@ if page == "★ Home":
     logo_col1, logo_col2, logo_col3 = st.columns([1, 4, 1])
     with logo_col2:
         st.image("1000051916.png", use_container_width=True)
+        
     st.title("★ Home")
     st.subheader("Welcome to CHEM𖦹CHAOS - The Virtual Cheminformatics Laboratory")
     st.write(
         "Compare molecular formulas, molecular weights, "
         "hydrogen-bond donors, and acceptors."
     )
+    
 
     # Sample Data for the Molecular Chart
     data = {
