@@ -1701,7 +1701,7 @@ Students can learn:
 # HOME PAGE
 # ============================================================
 
-if page == "🏠 Home":
+if page == "★ Home":
 
     # ========================================================
     # INSTITUTIONAL HEADER / COLLEGE LOGO
@@ -1820,7 +1820,7 @@ if page == "🏠 Home":
 # THEORY PAGE
 # ============================================================
 
-elif page == "📖 Theory":
+elif page == "✴︎Theory":
 
     st.title("📖 Introduction to Cheminformatics")
 
@@ -1899,9 +1899,9 @@ Provides a simplified representation of the molecule.
 # MOLECULAR VISUALIZATION PAGE
 # ============================================================
 
-elif page == "🧬 Molecular Visualization":
+elif page == "⟡ Molecular Visualization":
 
-    st.title("🧬 Molecular Visualization Laboratory")
+    st.title("⟡ Molecular Visualization Laboratory")
 
     st.info("Enter a new SMILES or load an example. The selected molecule will be used across the laboratory pages.")
 
@@ -2056,9 +2056,9 @@ elif page == "🧬 Molecular Visualization":
 # COMPLETE MOLECULAR PROPERTIES REPORT
 # ============================================================
 
-elif page == "📊 Molecular Properties Report":
+elif page == "✽ Molecular Properties Report":
 
-    st.title("📊 Complete Molecular Properties Report")
+    st.title("✽ Complete Molecular Properties Report")
 
     st.info("""
 Enter any valid SMILES notation. The system will automatically
@@ -2183,7 +2183,7 @@ generate a complete molecular properties report.
             # PROPERTY METRICS
             # ------------------------------------------------
 
-            st.subheader("📊 Important Molecular Properties")
+            st.subheader("✽ Important Molecular Properties")
 
             col1, col2, col3, col4 = st.columns(4)
 
@@ -2388,9 +2388,9 @@ generate a complete molecular properties report.
 # STRUCTURE PROPERTY ANALYSIS
 # ============================================================
 
-elif page == "📈 Structure–Property Analysis":
+elif page == "༄ Structure–Property Analysis":
 
-    st.title("📈 Structure–Property Analysis")
+    st.title("༄ Structure–Property Analysis")
 
     st.write("""
 Compare the properties of multiple molecules.
@@ -2478,9 +2478,9 @@ Aspirin,CC(=O)Oc1ccccc1C(=O)O"""
 # ASSESSMENT
 # ============================================================
 
-elif page == "📝 Assessment":
+elif page == "🀦Assessment":
 
-    st.title("📝 Cheminformatics Assessment")
+    st.title("🀦Cheminformatics Assessment")
 
     questions = [
         {"question":"What is the full form of SMILES?", "options":["Simplified Molecular Input Line Entry System","Standard Molecular Information Language Encoding System","Simple Molecular Identification and Labeling System"], "answer":"Simplified Molecular Input Line Entry System"},
@@ -2554,9 +2554,9 @@ elif page == "📝 Assessment":
 # FINAL PROJECT REPORT
 # ============================================================
 
-elif page == "📄 Final Project Report":
+elif page == "🗫 Final Project Report":
 
-    st.title("📄 Final Student Molecular Analysis Report")
+    st.title("🗫 Final Student Molecular Analysis Report")
     st.write(
         "Enter one SMILES string per line. The report will include every valid molecule "
         "in a single downloadable PDF."
