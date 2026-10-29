@@ -1706,7 +1706,7 @@ if page == "★ Home":
     # ========================================================
     # INSTITUTIONAL HEADER / COLLEGE LOGO
     # ========================================================
-    logo_path = os.path.join(os.path.dirname(__file__), "ChemChaos_logo.jpeg.jpeg")
+    logo_path = "ChemChaos_logo.jpeg"
 
     if os.path.exists(logo_path):
         logo_col1, logo_col2, logo_col3 = st.columns([1, 4, 1])
