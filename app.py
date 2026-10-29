@@ -1756,7 +1756,7 @@ st.write("""
     important concepts in cheminformatics and computational chemistry.
     """)
 
-    st.markdown("✴What can students do?✴")
+    st.markdown("""✴What can students do?✴""")
 
     st.markdown("""
      Enter any SMILES notation
