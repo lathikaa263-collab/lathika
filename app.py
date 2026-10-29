@@ -1964,7 +1964,7 @@ elif page == "✴︎ Theory":
     ## What is Cheminformatics?
     Cheminformatics is the use of computer and informational techniques, 
     stored in databases, to solve problems in chemistry.
-    """)
+    
 Cheminformatics combines:
 
 - Chemistry ⚗️
