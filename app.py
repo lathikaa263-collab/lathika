@@ -1886,7 +1886,7 @@ st.sidebar.markdown("""
     - Structure-property relationships
     """)
 
-   st.markdown(
+st.markdown(
         "Enter any SMILES notation\n\n"
         "☆ Validate molecular structures\n\n"
         "☆ Generate 2D structures\n\n"
