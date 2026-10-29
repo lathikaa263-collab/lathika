@@ -59,6 +59,21 @@ if st.sidebar.button(
     else "🌙 Switch to Dark Mode"
 ):
     st.session_state.dark_mode = not st.session_state.dark_mode
+    # --- ADD NAVIGATION HERE ---
+st.sidebar.markdown("---")
+st.sidebar.markdown("### Navigation")
+page = st.sidebar.radio(
+    "Go to",
+    [
+        "★ Home",
+        "✴︎ Theory",
+        "⟡ Molecular Visualization",
+        "✽ Molecular Properties Report",
+        "༄ Structure–Property Analysis",
+        "𓍢ִ໋🀦 Assessment",
+        "🗫 Final Project Report"
+    ]
+)
 
 # Theme colors
 if st.session_state.dark_mode:
@@ -136,6 +151,14 @@ st.markdown(
     }}
     </style>
     """,
+    unsafe_allow_html=True
+)
+# --- ADD DEVELOPED BY FOOTER HERE ---
+st.sidebar.markdown("---")
+st.sidebar.markdown(
+    "<div style='text-align: center; font-size: 12px; opacity: 0.8;'>"
+    "<b>Developed by:</b> CHEM𖦹CHAOS Team"
+    "</div>",
     unsafe_allow_html=True
 )
 import pandas as pd
@@ -1714,7 +1737,7 @@ if page == "★ Home":
             st.image(logo_path, use_container_width=True)
 
     st.markdown(
-        '<div class="main-title">CHEM CHAOS</div>',
+        '<div class="main-title">CHEM𖦹CHAOS</div>',
         unsafe_allow_html=True
     )
 
