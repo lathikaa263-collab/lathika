@@ -1700,7 +1700,6 @@ Students can learn:
 # ============================================================
 
 if page == "★ Home":
-    if page == "★ Home":
     # 1. Welcome section comes first at the top
     st.title("★ Home")
     st.subheader("Welcome to CHEM𖦹CHAOS - The Virtual Cheminformatics Laboratory")
