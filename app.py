@@ -161,9 +161,7 @@ st.sidebar.markdown(
 # ============================================================
 # MAIN PAGE ROUTING (This handles the page switching)
 # ============================================================
-
 if page == "★ Home":
-    # 1. Display the custom logo centered at the top
     logo_col1, logo_col2, logo_col3 = st.columns([1, 4, 1])
     with logo_col2:
         st.image("1000051916.png", use_container_width=True)
