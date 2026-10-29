@@ -193,8 +193,40 @@ if page == "★ Home":
 
 elif page == "✴︎ Theory":
     st.title("✴︎ Theory")
-    st.write("Theory content goes here.")
+    st.write(
+        "Welcome to the theoretical foundation of **CHEM𖦹CHAOS**. "
+        "Here we explore how computers represent and analyze chemical structures."
+    )
 
+    st.markdown("### 1. SMILES Notation")
+    st.write(
+        "Simplified Molecular-Input Line-Entry System (SMILES) is a specification in "
+        "form of a line notation for describing the structure of chemical species using short ASCII strings."
+    )
+    st.info("Example: Ethanol is represented as `CCO`, and Benzene as a closed ring `c1ccccc1`.")
+
+    st.markdown("### 2. Key Molecular Descriptors")
+    st.markdown(
+        """
+        - **LogP (Partition Coefficient):** Measures the lipophilicity of a compound. High LogP values indicate fat-solubility, while negative values indicate water-solubility.
+        - **TPSA (Topological Polar Surface Area):** Measures the surface sum over all polar atoms (usually oxygens and nitrogens) and is a key indicator of membrane permeability.
+        - **Hydrogen Bond Donors/Acceptors:** Important parameters for predicting drug-likeness and intermolecular binding.
+        """
+    )
+
+    st.markdown("### 3. Lipinski's Rule of Five")
+    st.write(
+        "A rule of thumb to evaluate if a chemical compound with a certain pharmacological "
+        "or biological activity has chemical properties that would make it a likely orally active drug in humans:"
+    )
+    st.markdown(
+        """
+        1. Molecular weight under 500 Daltons
+        2. No more than 5 Hydrogen bond donors
+        3. No more than 10 Hydrogen bond acceptors
+        4. LogP not higher than 5
+        """
+    )
 elif page == "⟡ Molecular Visualization":
     st.title("⟡ Molecular Visualization")
     st.write("Visualization tools go here.")
@@ -209,7 +241,42 @@ elif page == "༄ Structure–Property Analysis":
 
 elif page == "𓍢ִ໋🀦 Assessment":
     st.title("𓍢ִ໋🀦 Assessment")
-    st.write("Assessment tools go here.")
+    st.write("Test your knowledge on cheminformatics principles and molecular descriptors!")
+
+    # Quiz Question 1
+    st.markdown("#### Question 1: What does LogP primarily measure in cheminformatics?")
+    q1 = st.radio(
+        "Select your answer for Q1:",
+        [
+            "A) Molecular weight and mass",
+            "B) Lipophilicity (fat vs. water solubility)",
+            "C) Number of aromatic rings",
+            "D) Exact boiling point"
+        ],
+        key="q1_ans"
+    )
+
+    if st.button("Submit Q1 Answer"):
+        if "B) Lipophilicity" in q1:
+            st.success("Correct! LogP measures the partition coefficient, indicating how lipophilic a molecule is.")
+        else:
+            st.error("Incorrect. Remember that LogP relates to partition and lipophilicity.")
+
+    st.markdown("---")
+
+    # Quiz Question 2
+    st.markdown("#### Question 2: Which SMILES string represents Ethanol?")
+    q2 = st.radio(
+        "Select your answer for Q2:",
+        ["A) H2O", "B) CCO", "C) c1ccccc1", "D) CC(=O)O"],
+        key="q2_ans"
+    )
+
+    if st.button("Submit Q2 Answer"):
+        if "CCO" in q2:
+            st.success("Correct! `CCO` is the standard SMILES notation for Ethanol.")
+        else:
+            st.error("Incorrect. `CCO` stands for a two-carbon chain attached to an alcohol group.")
 
 elif page == "🗫 Final Project Report":
     st.title("🗫 Final Project Report")
