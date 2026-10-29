@@ -1751,11 +1751,10 @@ if page == "★ Home":
 
     st.divider()
 
-st.write("""
+    st.write("""
     This interactive virtual laboratory helps students understand
     important concepts in cheminformatics and computational chemistry.
     """)
-
     st.markdown("""✴What can students do?✴""")
 
     st.markdown("""
