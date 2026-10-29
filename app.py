@@ -1957,7 +1957,7 @@ st.info("📧 **For queries, contact:** lathikaa263@gmail.com")
 # THEORY PAGE
 # ============================================================
 
-elif page == "✴︎Theory":
+ elif page == "✴︎Theory":
 
     st.title("📖 Introduction to Cheminformatics")
 
