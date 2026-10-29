@@ -1941,7 +1941,7 @@ st.dataframe(
         hide_index=True
     )
 
-    st.divider()
+st.divider()
 
     st.markdown("Developed by")
     st.markdown("M.LATHIKA")
