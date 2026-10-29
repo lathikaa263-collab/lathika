@@ -172,6 +172,11 @@ if page == "★ Home":
         "Compare molecular formulas, molecular weights, "
         "hydrogen-bond donors, and acceptors."
     )
+    st.markdown("### ✴ What can students do? ✴")
+    st.markdown(
+        "Compare molecular formulas, molecular weights, "
+        "hydrogen-bond donors, and acceptors."
+    )
     
 
     # Sample Data for the Molecular Chart
@@ -1882,7 +1887,7 @@ st.sidebar.markdown("""
     """)
 
     
-    st.markdown("""✴What can students do?✴""")
+   
     st.markdown("""
      Enter any SMILES notation
 
