@@ -1935,7 +1935,7 @@ example_df = pd.DataFrame({
         ]
     })
 
-    st.dataframe(
+st.dataframe(
         example_df,
         use_container_width=True,
         hide_index=True
