@@ -277,6 +277,68 @@ elif page == "𓍢ִ໋🀦 Assessment":
             st.success("Correct! `CCO` is the standard SMILES notation for Ethanol.")
         else:
             st.error("Incorrect. `CCO` stands for a two-carbon chain attached to an alcohol group.")
+            st.markdown("---")
+
+    # Quiz Question 3
+    st.markdown("#### Question 3: What does TPSA (Topological Polar Surface Area) primarily help estimate?")
+    q3 = st.radio(
+        "Select your answer for Q3:",
+        [
+            "A) Membrane permeability and drug absorption",
+            "B) Total number of carbon atoms",
+            "C) Optical rotation in a polarimeter",
+            "D) Melting point of the crystal lattice"
+        ],
+        key="q3_ans"
+    )
+
+    if st.button("Submit Q3 Answer"):
+        if "A) Membrane permeability" in q3:
+            st.success("Correct! TPSA is widely used as a predictor of drug transport properties like intestinal absorption and blood-brain barrier penetration.")
+        else:
+            st.error("Incorrect. TPSA measures surface contributions of polar atoms (like O and N) to estimate polarity and permeability.")
+
+    st.markdown("---")
+
+    # Quiz Question 4
+    st.markdown("#### Question 4: Under Lipinski's Rule of Five, what is the maximum recommended molecular weight threshold for a drug-like molecule?")
+    q4 = st.radio(
+        "Select your answer for Q4:",
+        [
+            "A) 200 Daltons",
+            "B) 500 Daltons",
+            "C) 1000 Daltons",
+            "D) 2000 Daltons"
+        ],
+        key="q4_ans"
+    )
+
+    if st.button("Submit Q4 Answer"):
+        if "B) 500 Daltons" in q4:
+            st.success("Correct! Lipinski's rule states that most orally active drugs have a molecular weight under 500 Daltons.")
+        else:
+            st.error("Incorrect. The threshold for molecular weight in Lipinski's Rule of Five is 500 Daltons.")
+
+    st.markdown("---")
+
+    # Quiz Question 5
+    st.markdown("#### Question 5: In chemical bonding analysis, how are Pi ($\pi$) bonds typically formed?")
+    q5 = st.radio(
+        "Select your answer for Q5:",
+        [
+            "A) Head-on overlap of atomic orbitals",
+            "B) Lateral (side-by-side) overlap of unhybridized p-orbitals",
+            "C) Electrostatic attraction between ions",
+            "D) Sharing of a single electron pair"
+        ],
+        key="q5_ans"
+    )
+
+    if st.button("Submit Q5 Answer"):
+        if "B) Lateral" in q5:
+            st.success("Correct! Pi bonds arise from the lateral overlap of parallel p-orbitals, common in double and triple bonds.")
+        else:
+            st.error("Incorrect. Head-on overlap forms sigma ($\sigma$) bonds, whereas lateral overlap forms pi ($\pi$) bonds.")
 
 elif page == "🗫 Final Project Report":
     st.title("🗫 Final Project Report")
