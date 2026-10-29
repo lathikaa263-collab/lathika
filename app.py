@@ -1881,10 +1881,7 @@ st.sidebar.markdown("""
     - Structure-property relationships
     """)
 
-    st.write(
-        "This interactive virtual laboratory helps students understand "
-        "important concepts in cheminformatics and computational chemistry."
-    )
+    
     st.markdown("""✴What can students do?✴""")
     st.markdown("""
      Enter any SMILES notation
